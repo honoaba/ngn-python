@@ -158,8 +158,8 @@ class MainWindow(QWidget):
         table_label = QLabel("<b></b>")
         self.table = QTableWidget()
         self.table.setColumnCount(1)
-        #self.table.setFixedWidth(220) # ر
-        self.table.setFixedWidth(150) # دار
+        #self.table.setFixedWidth(220) # عرض ثابت و کم برای ستون شماره/مقدار
+        self.table.setFixedWidth(150) # عرض ثابت و کم برای ستون شماره/مقدار
         self.table.setHorizontalHeaderLabels(["NUMBERS"])
         self.table.horizontalHeader().setStyleSheet("""
         QHeaderView::section {
@@ -288,7 +288,7 @@ class MainWindow(QWidget):
             item = self.table.item(row_idx, j)
             if item:
                 item.setBackground(QColor("#C8E6C9")) 
-                item.setForeground(QColor("#2E7D92"))
+                item.setForeground(QColor("#2E7D32"))
 
     def on_finished(self):
         self.btn_start.setEnabled(True)
